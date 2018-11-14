@@ -22,3 +22,20 @@ library(tidyverse)
 Here is another thing for you to read!
 
 It works!!! :) 
+#########################################
+
+Creator (Geoff)
+Getting the gc_df.csv data, loading tidyverse, and getting some summary counts
+
+```{r}
+gc_df <- read_csv("gc_df.csv")
+
+get_guns <- gc_df %>% 
+  filter(gender != "NA", make_get_guns != "NA") %>% 
+  count(gender, make_get_guns) %>% 
+  spread(make_get_guns, n) %>%  #allows you to use the key value pair to convert levels that exist in one column to another column
+  select(-gender)
+
+rownames(get_guns) <- c("Female", "Male")
+```
+
