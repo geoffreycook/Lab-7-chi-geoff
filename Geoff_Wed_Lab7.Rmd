@@ -13,6 +13,8 @@ Here is some fun text for you to read.
 
 Here is more stuff for you to read. No peaking! gotta wait until I push to Git.
 
+Ha Ha Ha... >.>
+
 ```{r}
 library(tidyverse)
 ```
